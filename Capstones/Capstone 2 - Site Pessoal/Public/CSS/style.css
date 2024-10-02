@@ -1,0 +1,31 @@
+.gradient-background-normal{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(247,39,152,1) 60%, rgba(245,125,31,1) 100%);
+}
+
+.gradient-background-reverse{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg,rgba(245,125,31,1)  0%, rgba(247,39,152,1) 60%, rgba(0,0,0,1) 100%);
+}
+.nav-link{
+    color: white;
+    background-color: transparent;
+    text-decoration:none;
+}
+
+.nav-link:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.nav-link:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.profile-img{
+    height: 400px;
+}
+
+  
