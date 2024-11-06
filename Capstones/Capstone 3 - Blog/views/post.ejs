@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <div class="col-md-12">
+        <h4 class="mb-3">Make a blog post!</h4>
+        <form action="/edit" method="POST" class="display-flex">
+            <div class="row g-3">
+
+                <div class="col-sm-6">
+                    <label for="postTitle" class="form-label"> Title </label>
+                    <textarea type="text" class="form-control" id="postTitle" name="postTitle"><%= title %></textarea>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="postTag" class="form-label"> Tag </label>
+                    <textarea type="text" class="form-control" id="postTag" name="postTag"><%= tag %></textarea>
+                    
+                </div>
+
+                <div class="col-12">
+                    <label for="postDescription" class="form-label">Description</label>
+                    <input type="text" name="postDescription" id="postDescription" class="form-control" value="<%=description %>">
+                </div>
+
+                <div class="col-12">
+                    <label for="postBody" class="form-label">Body</label>
+                    <textarea type="text" name="postBody" id="postBody" class=" form-control postBody"><%= text %></textarea>
+                </div>
+                
+            </div>
+        
+            <hr>
+            <input class="btn btn-primary" type="submit" value="Save edit"/>
+        </form>
+        <form action="/del" method="DELETE" class="mt-1">
+            <input class="btn btn-danger" type="submit" value="Delete post">
+        </form>   
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

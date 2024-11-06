@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <div class="row mb-2">
+
+        <% let cont = 0 %>
+        <% cardList.forEach(card => { %>           
+            <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <form action="/post" method="POST">
+                        <strong class="d-inline-block mb-2 text-primary-emphasis"> <%= card.tag %> </strong>
+                        <textarea type="text" class="id" id="postID" name="postID"> <%= cont %> </textarea>
+                        <h3 class="mb-0"> <%= card.title %> </h3>
+                        <div class="mb-1 text-body-secondary"> <%= card.date %> </div>
+                        <p class="card-text mb-auto"> <%= card.description %> </p>
+                        <input class="btn btn-link" type="submit" value="Continue Reading" />
+                    </form>    
+                </div>
+            </div>
+            </div>
+            <% cont++; %>
+        <% }); %>
+    </div> 
+</div>
+<%- include("partials/footer.ejs") %>
