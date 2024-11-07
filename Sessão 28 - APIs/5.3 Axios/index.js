@@ -34,7 +34,6 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-  console.log(req.body);
   // Step 2: Play around with the drop downs and see what gets logged.
   // Use axios to make an API request to the /filter endpoint. Making
   // sure you're passing both the type and participants queries.
@@ -46,13 +45,15 @@ app.post("/", async (req, res) => {
   try {
     const data = req.body;
     const filter = makeFilter(data.type, data.participants);
-    console.log(filter)
+
+
     const response = await axios.get("https://bored-api.appbrewery.com/filter?" + filter);
     const resultArray = response.data;
     const randNumber = Math.floor(Math.random() * resultArray.length);
     const result = resultArray[randNumber]
-    console.log(result);
+
     res.render("index.ejs", {result});
+
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", { error: error.message });
