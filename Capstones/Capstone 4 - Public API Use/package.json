@@ -1,0 +1,16 @@
+{
+  "name": "capstone-4---public-api-use",
+  "version": "1.0.0",
+  "description": "Capstone project 4 - public API use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João Vitor",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}
