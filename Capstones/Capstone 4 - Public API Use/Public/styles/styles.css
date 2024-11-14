@@ -1,0 +1,10 @@
+body {
+  background-color: skyblue;
+   
+}
+
+div{
+    margin-top: 10vh; 
+    text-align: center;
+    align-items: space-beetween;
+}
